@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ui-switch</title>
+    <link href="../src/ui-switch.css" rel="stylesheet" />
+    <style>
+    .demo-box {
+        margin: 40px auto;
+        width: 600px;
+        padding: 20px;
+        border: 5px solid #ccc;
+    }
+    
+    .demo-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    .demo-table caption {
+        border-bottom: 1px dashed #ccc;
+        height: 40px;
+        margin-bottom: 20px;
+        font: 18px/1.2 normal 'microsoft yahei';
+    }
+    
+    .demo-table tr td {
+        padding: 8px 10px;
+        font: 16px/1.8 normal 'microsoft yahei';
+        vertical-align: top;
+    }
+    
+    .ui-input {
+        vertical-align: top;
+        height: 18px;
+        font-size: 16px;
+        line-height: 20px;
+        border: 1px solid #aaa;
+        padding: 6px 8px;
+        border-radius: 3px;
+    }
+    
+    .font-mini {
+        font-size: 12px;
+    }
+    
+    .font-small {
+        font-size: 14px;
+    }
+    
+    .font-primary {
+        font-size: 16px;
+    }
+    
+    .font-big {
+        font-size: 20px;
+    }
+    
+    .font-large {
+        font-size: 28px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo-box">
+        <table class="demo-table">
+            <caption>开关插件演示</caption>
+            <tr>
+                <td style="width:120px;">
+                    <label>普通（关）</label>
+                </td>
+                <td>
+                    <input class="ui-switch" type="checkbox" value="1">
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120px;">
+                    <label>普通（开）</label>
+                </td>
+                <td>
+                    <input class="ui-switch" type="checkbox" checked="checked" value="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>普通(disabled)</label>
+                </td>
+                <td>
+                    <input class="ui-switch" type="checkbox" id="sw" disabled value="1">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="../../_common/jquery.min.js"></script>
+<script src="../src/ui-switch.js"></script>
+<script>
+$('.ui-switch').ui_switch();
+
+var sw = $('#sw').data('ui-switch');
+
+
+sw.click = function(stauts, item) {
+    console.log('click', stauts, item.val());
+}
+sw.change = function(stauts, item) {
+    console.log('change', stauts, item.val());
+}
+</script>
+
+</html>
