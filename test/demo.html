@@ -6,16 +6,60 @@
     <title>ui-switch</title>
     <link href="../src/ui-switch.css" rel="stylesheet" />
     <style>
-    .demo-box { margin: 40px auto; width: 600px; padding: 20px; border: 5px solid #ccc; }
-    .demo-table { border-collapse: collapse; width: 100%; }
-    .demo-table caption { border-bottom: 1px dashed #ccc; height: 40px; margin-bottom: 20px; font: 18px/1.2 normal 'microsoft yahei'; }
-    .demo-table tr td { padding: 8px 10px; font: 16px/1.8 normal 'microsoft yahei'; vertical-align: top; }
-    .ui-input { vertical-align: top; height: 18px; font-size: 16px; line-height: 20px; border: 1px solid #aaa; padding: 6px 8px; border-radius: 3px; }
-    .font-mini { font-size: 12px; }
-    .font-small { font-size: 14px; }
-    .font-primary { font-size: 16px; }
-    .font-big { font-size: 20px; }
-    .font-large { font-size: 28px; }
+    .demo-box {
+        margin: 40px auto;
+        width: 600px;
+        padding: 20px;
+        border: 5px solid #ccc;
+    }
+    
+    .demo-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    .demo-table caption {
+        border-bottom: 1px dashed #ccc;
+        height: 40px;
+        margin-bottom: 20px;
+        font: 18px/1.2 normal 'microsoft yahei';
+    }
+    
+    .demo-table tr td {
+        padding: 8px 10px;
+        font: 16px/1.8 normal 'microsoft yahei';
+        vertical-align: top;
+    }
+    
+    .ui-input {
+        vertical-align: top;
+        height: 18px;
+        font-size: 16px;
+        line-height: 20px;
+        border: 1px solid #aaa;
+        padding: 6px 8px;
+        border-radius: 3px;
+    }
+    
+    .font-mini {
+        font-size: 12px;
+    }
+    
+    .font-small {
+        font-size: 14px;
+    }
+    
+    .font-primary {
+        font-size: 16px;
+    }
+    
+    .font-big {
+        font-size: 20px;
+    }
+    
+    .font-large {
+        font-size: 28px;
+    }
     </style>
 </head>
 
@@ -51,8 +95,9 @@
     </div>
 </body>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://raw.githubusercontent.com/wangxing218/ui-switch/master/src/ui-switch.js"></script>
+<script src="../src/ui-switch.js"></script>
 <script>
+
 $('.ui-switch').ui_switch();
 
 var sw = $('#sw').data('ui-switch');
