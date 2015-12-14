@@ -1,7 +1,7 @@
 # ui-switch 开关插件
 可将checkbox变成流行的开关插件
 纯css编写，api齐全
-[demo](http://wangxing218.github.io/ui-switch/test/demo.html)
+[demo](http://wangxing218.github.io/demo/ui-switch/test/demo.html)
 
 #基于jquery,使用非常方便！
 ```javascript
