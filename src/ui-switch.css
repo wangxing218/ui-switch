@@ -1,14 +1,73 @@
 @charset "utf-8";
 
-/*ui-choose样式，可根据实际项目需求进行调整*/
-input.ui-switch { display: none; }
-span.ui-switch { display: inline-block; position: relative; border: 1px solid #ccc; height: 28px; width: 48px; border-radius: 18px; vertical-align: middle; cursor: pointer; outline: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-span.ui-switch:after { content: ""; display: block; width: 26px; height: 26px; border-radius: 14px; background-color: #aaa; position: absolute; top: 1px; left: 21px; transition: all .15s ease; -webkit-transition: all .15s ease; }
-input.ui-switch:checked+span.ui-switch { border-color: #80C532; }
-span.ui-switch.on { border-color: #80C532; }
-input.ui-switch:checked+span.ui-switch:after { background-color: #80C532; left: 1px; }
-span.ui-switch.on:after { background-color: #80C532; left: 1px; }
-input.ui-switch:disabled + span.ui-switch { border-color: #ccc; cursor: not-allowed; }
-span.ui-switch.disabled { border-color: #ccc; cursor: not-allowed; }
-input.ui-switch:disabled+span.ui-switch:after { background-color: #ccc; }
-span.ui-switch.disabled:after { background-color: #ccc; }
+/*ui-switch 开关样式，可根据实际项目需求进行调整*/
+
+input.ui-switch {
+    display: none;
+}
+
+span.ui-switch {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    height: 28px;
+    width: 48px;
+    border-radius: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+span.ui-switch:after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #aaa;
+    position: absolute;
+    top: 1px;
+    left: 21px;
+    transition: all .15s ease;
+    -webkit-transition: all .15s ease;
+}
+
+input.ui-switch:checked+span.ui-switch {
+    border-color: #80C532;
+}
+
+span.ui-switch.on {
+    border-color: #80C532;
+}
+
+input.ui-switch:checked+span.ui-switch:after {
+    background-color: #80C532;
+    left: 1px;
+}
+
+span.ui-switch.on:after {
+    background-color: #80C532;
+    left: 1px;
+}
+
+input.ui-switch:disabled + span.ui-switch {
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+span.ui-switch.disabled {
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+input.ui-switch:disabled+span.ui-switch:after {
+    background-color: #ccc;
+}
+
+span.ui-switch.disabled:after {
+    background-color: #ccc;
+}
