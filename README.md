@@ -4,7 +4,7 @@
 [查看demo](http://htmlpreview.github.io/?https://github.com/wangxing218/ui-switch/blob/master/test/demo.html)
 
 #基于jquery,使用非常方便！
-```
+```javascript
 // 实例化一个开关
 $('input.ui-switch').ui_switch();
 
@@ -23,7 +23,8 @@ sw.click = function(status , el ){
 ```
 
 #预览
-![](https://raw.githubusercontent.com/wangxing218/ui-select/master/test/demo.jpg)  
+[![demo]](http://htmlpreview.github.io/?https://github.com/wangxing218/ui-switch/blob/master/test/demo.html)
+[demo]:https://raw.githubusercontent.com/wangxing218/ui-switch/master/test/demo.jpg "查看demo"
 
 #兼容性
 IE8+, Chrome, Firefox, Edge, 360, Sougou 等主流浏览器;
