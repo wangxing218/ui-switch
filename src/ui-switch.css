@@ -10,9 +10,10 @@ span.ui-switch {
     display: inline-block;
     position: relative;
     border: 1px solid #ccc;
+    background-color: #fff;
     height: 28px;
     width: 48px;
-    border-radius: 18px;
+    border-radius: 20px;
     vertical-align: middle;
     cursor: pointer;
     outline: none;
@@ -20,54 +21,101 @@ span.ui-switch {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;
+}
+
+span.ui-switch.off {
+    background-color: #ccc;
 }
 
 span.ui-switch:after {
     content: "";
     display: block;
-    width: 26px;
-    height: 26px;
-    border-radius: 14px;
-    background-color: #aaa;
+    width: 28px;
+    height: 28px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0.5px 2px 0.5px rgba(0, 0, 0, 0.38);
     position: absolute;
-    top: 1px;
-    left: 21px;
-    transition: all .15s ease;
-    -webkit-transition: all .15s ease;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform .15s ease-out;
+    transition: transform .15s ease;
+}
+
+span.ui-switch.off:after {
+    width: 24px;
+    background-color: #fff;
 }
 
 input.ui-switch:checked+span.ui-switch {
     border-color: #80C532;
+    background-color: #80C532;
 }
 
 span.ui-switch.on {
     border-color: #80C532;
+    background-color: #80C532;
 }
 
 input.ui-switch:checked+span.ui-switch:after {
-    background-color: #80C532;
-    left: 1px;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-transform: translate(20px, 0);
+    transform: translate(20px, 0);
 }
 
 span.ui-switch.on:after {
-    background-color: #80C532;
-    left: 1px;
+    width: 24px;
+    background-color: #fff;
+    border-color: #fff;
+    left: auto;
+    right: 0;
 }
 
 input.ui-switch:disabled + span.ui-switch {
     border-color: #ccc;
     cursor: not-allowed;
+    background-color: #f0f0f0;
 }
 
 span.ui-switch.disabled {
+    background-color: #ccc;
     border-color: #ccc;
     cursor: not-allowed;
 }
 
 input.ui-switch:disabled+span.ui-switch:after {
-    background-color: #ccc;
+    background-color: #f0f0f0;
 }
 
 span.ui-switch.disabled:after {
-    background-color: #ccc;
+    background-color: #f0f0f0;
+    width: 24px;
+}
+
+input.ui-switch:disabled:checked + span.ui-switch {
+    border-color: #80C532;
+    cursor: not-allowed;
+    background-color: #80C532;
+    opacity: .8;
+}
+
+span.ui-switch.disabled.on {
+    border-color: #80C532;
+    background-color: #80C532;
+    cursor: not-allowed;
+    filter: alpha(opacity=80);
+}
+
+input.ui-switch:disabled:checked+span.ui-switch:after {
+    background-color: #fafafa;
+}
+
+span.ui-switch.disabled.on:after {
+    background-color: #fafafa;
+    width: 24px;
 }

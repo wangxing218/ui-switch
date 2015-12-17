@@ -48,27 +48,47 @@
         <table class="demo-table">
             <caption>开关插件演示</caption>
             <tr>
-                <td style="width:120px;">
-                    <label>普通（关）</label>
+                <td style="width:40%;">
+                    <label>普通（off）</label>
                 </td>
                 <td>
-                    <input class="ui-switch" type="checkbox" value="1">
+                    <input class="ui-switch" id="us_01" type="checkbox" value="1">
                 </td>
             </tr>
             <tr>
                 <td style="width:120px;">
-                    <label>普通（开）</label>
+                    <label>普通（on）</label>
                 </td>
                 <td>
-                    <input class="ui-switch" type="checkbox" checked="checked" value="1">
+                    <input class="ui-switch" id="us_02" type="checkbox" checked="checked" value="1">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>普通(disabled)</label>
+                    <label>禁用(off)</label>
                 </td>
                 <td>
-                    <input class="ui-switch" type="checkbox" id="sw" disabled value="1">
+                    <input class="ui-switch" type="checkbox" id="us_03" disabled value="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>禁用(on)</label>
+                </td>
+                <td>
+                    <input class="ui-switch" type="checkbox" id="us_04" disabled checked="checked" value="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>API</label>
+                </td>
+                <td>
+                    <button onclick="us.on()">开</button>
+                    <button onclick="us.off()">关</button>
+                    <button onclick="us.toggle()">切换</button>
+                    <button onclick="us.disable()">禁用</button>
+                    <button onclick="us.enable()">启用</button>
                 </td>
             </tr>
         </table>
@@ -77,18 +97,32 @@
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="../src/ui-switch.js"></script>
 <script>
-
+// 实例化所有的开关
 $('.ui-switch').ui_switch();
 
-var sw = $('#sw').data('ui-switch');
+// 取得已实例的开关对象
+var us = $('#us_01').data('ui-switch');
 
+// 点击事件
+us.click = function(stauts, el) {
+    console.log('click', stauts, this.val());
+};
 
-sw.click = function(stauts, el) {
-    console.log('click', stauts, el.val());
-}
-sw.change = function(stauts, el) {
+// 状态改变事件
+us.change = function(stauts, el) {
     console.log('change', stauts, el.val());
-}
+};
+
+// API
+
+// us.on()          //开
+// us.off()         //关
+// us.toggle()      //切换
+// us.disable()     //禁用
+// us.enable()      //启用
+// us.getStatus()   //获取开关状态
+// us.val()         //获取value
+// 
 </script>
 
 </html>

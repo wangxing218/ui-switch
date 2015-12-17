@@ -74,6 +74,7 @@
             if(this._lowIE){
                 this[this.status]();
                 this.disabled ?  this.disable() : null;
+                this._wrap.removeClass(this.status == 'off' ? 'on':'off').addClass(this.status);
             }
             return this;
         },
